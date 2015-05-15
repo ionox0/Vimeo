@@ -1,0 +1,20 @@
+@import 'variables';
+@import 'mixins';
+@import 'video-list-view';
+@import 'video-list-item-view';
+@import 'video-theater-view';
+
+body {
+
+  @include scrollbar;
+  margin: 0px;
+  background-color: #000;
+
+  #ribbon {
+    background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22500%22%3E%3Crect%20x%3D%220%22%20width%3D%226%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23172327%22%2F%3E%3Crect%20x%3D%226%22%20width%3D%2214%22%20height%3D%22100%25%22%20style%3D%22fill%3A%2319372c%22%2F%3E%3Crect%20x%3D%2220%22%20width%3D%2228%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23327344%22%2F%3E%3Crect%20x%3D%2248%22%20width%3D%2235%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23437e4c%22%2F%3E%3Crect%20x%3D%2283%22%20width%3D%2226%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23869956%22%2F%3E%3Crect%20x%3D%22109%22%20width%3D%2229%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23b08f42%22%2F%3E%3Crect%20x%3D%22138%22%20width%3D%2212%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23b46839%22%2F%3E%3Crect%20x%3D%22150%22%20width%3D%2280%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23a43941%22%2F%3E%3Crect%20x%3D%22230%22%20width%3D%222%22%20height%3D%22100%25%22%20style%3D%22fill%3A%239c2c52%22%2F%3E%3Crect%20x%3D%22232%22%20width%3D%2242%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23bb426b%22%2F%3E%3Crect%20x%3D%22274%22%20width%3D%225%22%20height%3D%22100%25%22%20style%3D%22fill%3A%238a2f5c%22%2F%3E%3Crect%20x%3D%22279%22%20width%3D%223%22%20height%3D%22100%25%22%20style%3D%22fill%3A%236d416d%22%2F%3E%3Crect%20x%3D%22282%22%20width%3D%2217%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23413264%22%2F%3E%3Crect%20x%3D%22299%22%20width%3D%2293%22%20height%3D%22100%25%22%20style%3D%22fill%3A%2329416e%22%2F%3E%3Crect%20x%3D%22392%22%20width%3D%2247%22%20height%3D%22100%25%22%20style%3D%22fill%3A%235690a5%22%2F%3E%3Crect%20x%3D%22439%22%20width%3D%2228%22%20height%3D%22100%25%22%20style%3D%22fill%3A%232e849d%22%2F%3E%3Crect%20x%3D%22467%22%20width%3D%223%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23276686%22%2F%3E%3Crect%20x%3D%22470%22%20width%3D%227%22%20height%3D%22100%25%22%20style%3D%22fill%3A%2323436e%22%2F%3E%3Crect%20x%3D%22477%22%20width%3D%2223%22%20height%3D%22100%25%22%20style%3D%22fill%3A%23142a06%22%2F%3E%3C%2Fsvg%3E%0A) repeat-x top left;
+    display: block;
+    width: 100%;
+    height: 5px;
+  }
+
+}

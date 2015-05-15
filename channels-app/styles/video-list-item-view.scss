@@ -1,0 +1,18 @@
+.video-list-item-view {
+
+  display: inline-block;
+  height: $small-image-height;
+  width: $small-image-width;
+  margin: 15px;
+  // Gives horizontal scroll:
+  white-space: normal;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  overflow: auto;
+
+  .wrapper {
+    background-color: rgba(0,0,0,0.6);
+  }
+
+}

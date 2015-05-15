@@ -1,0 +1,10 @@
+#video-list-view {
+
+  // Gives horizontal scroll:
+  white-space: nowrap;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: $dark-grey;
+
+}
