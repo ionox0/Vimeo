@@ -1,5 +1,5 @@
 # Vimeo Channels App
-(View Live)[Vimeo.ianjohnson.co/#staffpicks]
+[View Live](http://vimeo.ianjohnson.co/#musicvideos)
 
 ### TODO:
 - Tests
