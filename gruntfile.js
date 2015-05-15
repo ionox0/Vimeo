@@ -33,7 +33,7 @@ module.exports = function (grunt) {
       server: {
         options: {
           hostname: '*',
-          port: 3001,
+          port: 3005,
           base: '<%= app.buildDir %>',
           middleware: function (connect) {
             return [

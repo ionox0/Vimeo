@@ -8,4 +8,3 @@ app.listen(port, function(){
   console.log('listening on port ' + port);
 });
 
-app.get('/:channel', questions.getFirstQuestion);
