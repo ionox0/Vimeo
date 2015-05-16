@@ -29,7 +29,7 @@ module.exports = function VideoListItemView(model, eventDelegator){
 
     //TODO: register listener in initialize()
     $(this.selector).on('click', function(e){
-      eventDelegator.trigger('showVideo', thiz.model);
+      eventDelegator.trigger('show:video', thiz.model);
       e.preventDefault();
       return false;
     });

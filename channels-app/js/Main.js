@@ -1,5 +1,7 @@
 'use strict';
 
+require('es6-promise').polyfill();
+
 $(document).ready(function(){
 
   var location = window.location.href.split('\/');

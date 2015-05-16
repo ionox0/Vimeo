@@ -1,7 +1,7 @@
 #video-list-view {
 
-  // Gives horizontal scroll:
   white-space: nowrap;
+  height: $video-list-view-height;
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;

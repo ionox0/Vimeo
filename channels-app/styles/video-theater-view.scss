@@ -1,9 +1,12 @@
-#video-theater-view {
+#video-theater {
+	
+	height: $video-theater-view-height;
+	width: 100%;
 
-  height: $large-image-height;
-  width: $large-image-width;
-  margin: auto;
-  background-repeat: no-repeat;
-  margin-top: 100px;
+  iframe {
+  	height: 100%;
+		width: 100%;
+  	margin: auto;
+  }
 
 }
