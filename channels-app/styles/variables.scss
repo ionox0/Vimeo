@@ -1,10 +1,14 @@
 // Heights + Widths
-$small-image-height: 150px;
-$small-image-width: 200px;
-$medium-image-height: 309px;
-$medium-image-width: 549px;
-$large-image-height: 360px;
-$large-image-width: 640px;
+$small-image-height: 			150px;
+$small-image-width: 			200px;
+$medium-image-height: 			309px;
+$medium-image-width: 			549px;
+$large-image-height: 			360px;
+$large-image-width: 			640px;
+
+$video-list-view-height: 		18%;
+$ribbon-height:					0.5%;
+$video-theater-view-height: 	100% - $video-list-view-height - 1%;
 
 // Colors
 $dark-grey: #202020;

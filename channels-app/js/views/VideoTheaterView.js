@@ -6,10 +6,9 @@ The main view of the currently selected video
 module.exports = function VideoTheaterView(model, eventDelegator){
 
   var thiz = this;
-  this.parentEl = '#video-theater';
+  this.selector = '#video-theater';
   this.template = JST['video-theater-view'];
-  this.eventDelegator = eventDelegator;
-  eventDelegator.registerListener('showVideo', function(video){
+  eventDelegator.registerListener('show:video', function(video){
     thiz.showVideo(video);
   });
 
@@ -18,16 +17,14 @@ module.exports = function VideoTheaterView(model, eventDelegator){
   */
   this.initialize = function(model){
     this.model = model;
-    this.selector = '[data-id=' + this.model.id + '-theater]';
+    //$(this.selector).css({height: $(window).height() - $('#video-list-view').height() - $('#ribbon').height() });
   };
 
   /*
   Render function
   */
   this.render = function(){
-    $(this.parentEl).html(this.template(this.model));
-    $(this.selector)
-      .css('background-image', 'url(' + this.model.thumbnail_large + ')');
+    $(this.selector).html(this.template(this.model));
   };
 
   /*
