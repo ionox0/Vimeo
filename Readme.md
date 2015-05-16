@@ -15,8 +15,10 @@ localhost:3005/#staffpicks
 - [ ] Tests
 - [ ] Borders
 - [ ] Fullscreen
+- [ ] HTML5 video
 - [ ] Cross browser
 - [ ] Router, routes
+- [ ] Polyfill for Promise
 - [ ] urlencoded routes
 - [ ] More Vimeo endpoints
 - [ ] Leverage JSONP callback
