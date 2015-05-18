@@ -1,5 +1,8 @@
 # Vimeo Channels App
-[View Live](http://vimeo.ianjohnson.co/#musicvideos)
+[#Musicvideos](http://vimeo.ianjohnson.co/#musicvideos)
+[#Documentaryfilm](http://vimeo.ianjohnson.co/#documentaryfilm)
+[#Booooooom](http://vimeo.ianjohnson.co/#booooooom)
+
 
 ### Running
 ```
