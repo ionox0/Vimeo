@@ -20,12 +20,12 @@ localhost:3005/#staffpicks
 - [ ] Router, routes
 - [ ] Polyfill for Promise
 - [ ] urlencoded routes
-- [ ] More Vimeo endpoints
+- [ ] Vimeo endpoints
 - [ ] Leverage JSONP callback
 - [ ] Unimplemented Grunt tasks
 - [ ] Display video info (sidebar view)
 - [ ] Animate List View (tray open/close)
 - [ ] Display channel info (sidebar view)
 - [ ] Extend models/views from base class
-- [ ] Use constructor pattern, private vars
-- [ ] Xhr cross-browser polyfill, or use $.ajax (despite promise shortcomings)
+- [ ] Constructor pattern, private vars
+- [ ] Xhr cross-browser polyfill / $.ajax 
