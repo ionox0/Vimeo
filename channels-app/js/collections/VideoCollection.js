@@ -23,7 +23,7 @@ module.exports = function VideoCollection(channel){
     utils.sendXhrReturnPromise('GET', this.videosUrl)
       .then(
         function(data){
-          thiz.setProperties(data);
+          thiz.addModels(data);
           thiz.callback();
         },
         function(error){console.log(error);
@@ -33,7 +33,7 @@ module.exports = function VideoCollection(channel){
   /*
   Iterate through json from api and set model's properties
   */
-  this.setProperties = function(apiData){
+  this.addModels = function(apiData){
     var thiz = this;
     _.each(apiData, function(videoData){
       var video = new Video();

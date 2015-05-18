@@ -8,12 +8,14 @@ module.exports = function EventDelegator(){
   this.events = {};
 
   this.registerListener = function(event, trigger){
-    this.events.event = trigger;
+  	this.events[event] ? 
+    	this.events[event].push(trigger)
+    	: (this.events[event] = [], this.events[event].push(trigger));
   };
 
-
   this.trigger = function(event, data){
-    this.events.event(data);
+  	//debugger;
+    _.each(this.events[event], function(trigger){ trigger(data); });
   };
 
 };

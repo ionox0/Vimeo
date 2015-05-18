@@ -3,10 +3,11 @@
 /*
 Item view for individual video in video-list-view
 */
-module.exports = function VideoListItemView(model, eventDelegator){
+module.exports = function VideoListItemView(model, EventDelegator){
 
-  this.eventDelegator = eventDelegator;
-  this.parentEl = '#video-list-view';
+  var thiz = this;
+  this.EventDelegator = EventDelegator;
+  this.region = '#video-list-region';
   this.template = JST['video-list-item-view'];
 
   /*
@@ -22,14 +23,12 @@ module.exports = function VideoListItemView(model, eventDelegator){
   Render function
   */
   this.render = function(){
-    var thiz = this;
-    $(this.parentEl).append(this.template(this.model));
+    $(this.region).append(this.template(this.model));
     $(this.selector)
       .css('background-image', 'url(' + this.model.thumbnail_medium + ')');
 
-    //TODO: register listener in initialize()
     $(this.selector).on('click', function(e){
-      eventDelegator.trigger('show:video', thiz.model);
+      EventDelegator.trigger('show:video', thiz.model);
       e.preventDefault();
       return false;
     });

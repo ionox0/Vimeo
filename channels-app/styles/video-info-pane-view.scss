@@ -1,0 +1,22 @@
+#video-info-pane-region {
+	
+	position: absolute;
+	width: 300px;
+  top: 30%;
+
+	#video-info-pane-view {
+
+		@include font;
+		color: $off-white;
+		background-color: rgba(0,0,0,0.6);
+		margin-left: -5px;
+		padding: 15px;
+		border-radius: 5px;
+
+		span {
+			color: $off-green;
+		}
+
+	}
+
+}

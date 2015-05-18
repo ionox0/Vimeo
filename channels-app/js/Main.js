@@ -10,7 +10,3 @@ $(document).ready(function(){
   window.VimeoChannelsApp.start(channel);
 
 });
-
-
-
-

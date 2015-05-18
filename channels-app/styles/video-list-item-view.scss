@@ -1,14 +1,16 @@
 .video-list-item-view {
 
+  @include font;
   display: inline-block;
-  height: $small-image-height;
+  height: 90%;
   width: $small-image-width;
-  margin: 15px;
-  // Gives horizontal scroll:
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 7px;
+  // Horizontal scroll:
   white-space: normal;
   text-align: center;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: white;
+  color: $off-white;
   overflow: auto;
 
   .wrapper {

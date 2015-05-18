@@ -22,6 +22,21 @@ module.exports = {
       request.send();
     });
     return promise;
+  },
+
+  setFader: function(selector, time){
+    var fadeout = null;
+    $(window).mousemove(function() {
+      if (this.fadeout == null){
+        clearTimeout(fadeout);
+        fadeout = setTimeout(hide, time);
+        $(selector).fadeIn('slow');
+      }
+    }); 
+    function hide(){
+      $(selector).fadeOut('slow');
+      clearTimeout(fadeout);
+    }
   }
 
 };

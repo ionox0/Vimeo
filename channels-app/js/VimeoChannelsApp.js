@@ -4,6 +4,7 @@ var EventDelegator = require('./utils/EventDelegator');
 var VideoCollection = require('./collections/VideoCollection');
 var VideoChannel = require('./models/VideoChannel');
 var VideoListView = require('./views/VideoListView');
+var videoInfoPaneView = require('./views/VideoInfoPaneView');
 var VideoTheaterView = require('./views/VideoTheaterView');
 
 /*
@@ -16,7 +17,6 @@ window.VimeoChannelsApp = (function(){
     /*
     Called on document.ready by main.js
     Initializes ListView and SlideshowView
-    TODO: Clean
     */
     start: function(channel){
       var thiz = this;
@@ -31,8 +31,10 @@ window.VimeoChannelsApp = (function(){
       this.videoChannel.collection = this.videoCollection;
       this.videoCollection.fetch(function(){
         thiz.videoListView = new VideoListView(thiz.videoCollection, thiz.eventDelegator);
+        thiz.videoInfoPaneView = new videoInfoPaneView(thiz.videoCollection.models[0], thiz.eventDelegator);
         thiz.videoTheaterView = new VideoTheaterView(thiz.videoCollection.models[0], thiz.eventDelegator);
         thiz.videoListView.render();
+        thiz.videoInfoPaneView.render();
         thiz.videoTheaterView.render();
       });
     }
