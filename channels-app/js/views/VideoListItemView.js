@@ -7,7 +7,7 @@ module.exports = function VideoListItemView(model, EventDelegator){
 
   var thiz = this;
   this.EventDelegator = EventDelegator;
-  this.region = '#video-list-region';
+  this.region = '#header-region';
   this.template = JST['video-list-item-view'];
 
   /*

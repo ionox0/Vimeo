@@ -1,6 +1,7 @@
 'use strict';
 
 var EventDelegator = require('./utils/EventDelegator');
+var SearchView = require('./views/SearchView');
 var VideoCollection = require('./collections/VideoCollection');
 var VideoChannel = require('./models/VideoChannel');
 var VideoListView = require('./views/VideoListView');
@@ -10,22 +11,37 @@ var CurtainsView = require('./views/CurtainsView');
 
 /*
 The brain and main controller
+App has two main modes, searchMode and playMode
 */
 window.VimeoChannelsApp = (function(){
 
   var app = {
 
+    route: function(channel){
+      if (!channel) {
+        this.searchMode();
+      } else {
+        this.playMode(channel);
+      }
+    },
+
     /*
     Called on document.ready by main.js
     Initializes ListView and SlideshowView
     */
-    start: function(channel){
-      var thiz = this;
+    initialize: function(){
       this.eventDelegator = new EventDelegator();
-
       this.curtainsView = new CurtainsView(this.eventDelegator);
       this.curtainsView.render();
+    },
 
+    searchMode: function(){
+      this.searchView = new SearchView();
+      this.searchView.render();
+    },
+
+    playMode: function(channel){
+      var thiz = this;
       /*
       videoChannel holds the channel metadata
       videoCollection holds the videos metadata
