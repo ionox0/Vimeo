@@ -3,7 +3,7 @@
   @include font;
   display: inline-block;
   height: 90%;
-  width: $small-image-width;
+  width: 175px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   margin: 7px;
@@ -11,7 +11,7 @@
   white-space: normal;
   text-align: center;
   color: $off-white;
-  overflow: auto;
+  overflow: hidden;
 
   .wrapper {
     background-color: rgba(0,0,0,0.6);

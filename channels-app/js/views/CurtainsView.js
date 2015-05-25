@@ -31,16 +31,8 @@ module.exports = function CurtainsView(EventDelegator){
   Triggered from EventDelegator
   */
   this.openCurtains = function(){
-    debugger;
-    $(this.leftSelector)
-    .css('left', '-8%')
-    .css('width', '7%')
-    .css('border-radius', '0px 0px 1000px/1200px 0px');
-
-    $(this.rightSelector)
-    .css('right', '-8%')
-    .css('width', '7%')
-    .css('border-radius', '0px 0px 0px 1000px/1200px');
+    $(this.leftSelector).addClass('open');
+    $(this.rightSelector).addClass('open');
   };
 
 };

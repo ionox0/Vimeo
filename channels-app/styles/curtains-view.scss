@@ -28,9 +28,21 @@
 
   [class*='curtain-left'] {
     border-radius: 100px / 1200px 0px;
+
+    &.open {
+      left: -8%;
+      width: 7%;
+      border-radius: 0px 0px 1000px/1200px 0px;
+    }
   }
 
   [class*='curtain-right'] {
     border-radius: 0px 100px / 1200px;
+    
+    &.open {
+      right: -8%;
+      width: 7%;
+      border-radius: 0px 0px 0px 1000px/1200px;
+    }
   }
 }
