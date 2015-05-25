@@ -1,6 +1,7 @@
 #video-theater-region {
 	
 	height: $video-theater-view-height;
+	z-index: $video-info-pane-region-z-index;
 	width: 100%;
 
   iframe {

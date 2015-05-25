@@ -14,8 +14,7 @@ module.exports = function EventDelegator(){
   };
 
   this.trigger = function(event, data){
-  	//debugger;
-    _.each(this.events[event], function(trigger){ trigger(data); });
+    this.events[event].forEach(function(trigger){ trigger(data); });
   };
 
 };

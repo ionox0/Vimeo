@@ -98,7 +98,7 @@ module.exports = function (grunt) {
       },
       dev: {
         files: {
-          '<%= app.buildDir %>/main.css': '<%= app.srcDir %>/**/*.scss'
+          '<%= app.buildDir %>/main.css': '<%= app.srcDir %>/styles/main.scss'
         }
       }
     },
@@ -194,7 +194,7 @@ module.exports = function (grunt) {
     'sass',
     //'copy',
     'jst',
-    'cssmin',
+    //'cssmin',
     'htmlmin',
     //'bower',
     //'compass',

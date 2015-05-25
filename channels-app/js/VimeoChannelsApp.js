@@ -6,6 +6,7 @@ var VideoChannel = require('./models/VideoChannel');
 var VideoListView = require('./views/VideoListView');
 var videoInfoPaneView = require('./views/VideoInfoPaneView');
 var VideoTheaterView = require('./views/VideoTheaterView');
+var CurtainsView = require('./views/CurtainsView');
 
 /*
 The brain and main controller
@@ -21,6 +22,10 @@ window.VimeoChannelsApp = (function(){
     start: function(channel){
       var thiz = this;
       this.eventDelegator = new EventDelegator();
+
+      this.curtainsView = new CurtainsView(this.eventDelegator);
+      this.curtainsView.render();
+
       /*
       videoChannel holds the channel metadata
       videoCollection holds the videos metadata
@@ -34,8 +39,6 @@ window.VimeoChannelsApp = (function(){
         thiz.videoInfoPaneView = new videoInfoPaneView(thiz.videoCollection.models[0], thiz.eventDelegator);
         thiz.videoTheaterView = new VideoTheaterView(thiz.videoCollection.models[0], thiz.eventDelegator);
         thiz.videoListView.render();
-        thiz.videoInfoPaneView.render();
-        thiz.videoTheaterView.render();
       });
     }
 
