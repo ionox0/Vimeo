@@ -1,11 +1,11 @@
 #video-info-pane-region {
 	
+	z-index: $video-info-pane-region-z-index;
 	position: absolute;
 	width: 300px;
   top: 30%;
 
 	#video-info-pane-view {
-
 		@include font;
 		color: $off-white;
 		background-color: rgba(0,0,0,0.6);
@@ -16,7 +16,6 @@
 		span {
 			color: $off-green;
 		}
-
 	}
 
 }

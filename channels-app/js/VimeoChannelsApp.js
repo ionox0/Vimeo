@@ -39,8 +39,6 @@ window.VimeoChannelsApp = (function(){
         thiz.videoInfoPaneView = new videoInfoPaneView(thiz.videoCollection.models[0], thiz.eventDelegator);
         thiz.videoTheaterView = new VideoTheaterView(thiz.videoCollection.models[0], thiz.eventDelegator);
         thiz.videoListView.render();
-        thiz.videoInfoPaneView.render();
-        thiz.videoTheaterView.render();
       });
     }
 

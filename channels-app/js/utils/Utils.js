@@ -25,17 +25,17 @@ module.exports = {
   },
 
   setFader: function(selector, time){
-    var fadeout = null;
+    var thiz = this;
+    this.fadeout = null;
     $(window).mousemove(function() {
-      if (this.fadeout === null){
-        clearTimeout(fadeout);
-        fadeout = setTimeout(hide, time);
-        $(selector).fadeIn('slow');
-      }
+      clearTimeout(thiz.fadeout);
+      thiz.fadeout = setTimeout(hide, time);
+      $(selector).fadeIn('slow');
     }); 
     function hide(){
+      /*jshint validthis:true */
       $(selector).fadeOut('slow');
-      clearTimeout(fadeout);
+      clearTimeout(this.fadeout);
     }
   }
 

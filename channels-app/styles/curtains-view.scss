@@ -1,31 +1,36 @@
-@for $i from 1 through 6 {
-  .#{curtain-left}-#{$i} {
-    width: 16.5% * $i;
-		left: -8% * $i;
-    z-index: -$i;
+#curtains-region {
+  position: absolute;
+  z-index: $curtains-region-z-index;
+
+  @for $i from 1 through 6 {
+    .#{curtain-left}-#{$i} {
+      width: 16.5% * $i;
+      left: -8% * $i;
+      z-index: -$i;
+    }
+    .#{curtain-right}-#{$i} {
+      width: 16.5% * $i;
+      right: -8%* $i;
+      z-index: -$i;
+    }
   }
-  .#{curtain-right}-#{$i} {
-    width: 16.5% * $i;
-		right: -8%* $i;
-    z-index: -$i;
+
+  [class*='curtain'] {
+    transition: border-radius 3s, left 3s, right 3s, width 3s;
+    -webkit-transition: border-radius, left, right, width;
+    -webkit-transition-duration: 3s;
+
+    border: 1px solid;
+    position: fixed;
+    background-color: darkred;
+    height: 100%;
   }
-}
 
-[class*='curtain-'] {
-	-webkit-transition: border-radius, width, left, right;
-  -webkit-transition-duration: 3s;
+  [class*='curtain-left'] {
+    border-radius: 100px / 1200px 0px;
+  }
 
-  border: 1px solid;
-	position: fixed;
-  background-color: darkred;
-  height: 500px;
-  margin-top: -250px;
-}
-
-[class*='curtain-left'] {
-  border-radius: 100px / 1200px 0px;
-}
-
-[class*='curtain-right'] {
-  border-radius: 0px 100px / 1200px;
+  [class*='curtain-right'] {
+    border-radius: 0px 100px / 1200px;
+  }
 }

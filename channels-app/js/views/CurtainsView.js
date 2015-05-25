@@ -6,9 +6,9 @@ Curtains
 module.exports = function CurtainsView(EventDelegator){
 
 	var thiz = this;
-	this.rightSelector = $('[class^=curtain-right');
-	this.leftSelector = $('[class^=curtain-left');
-  this.region = '#video-theater-region';
+  this.region = '#curtains-region';
+	this.rightSelector = '[class^=curtain-right]';
+	this.leftSelector = '[class^=curtain-left]';
   this.template = JST['curtains-view'];
 
   /*
@@ -29,18 +29,18 @@ module.exports = function CurtainsView(EventDelegator){
 
   /*
   Triggered from EventDelegator
-  Reinitialize and rerender
   */
   this.openCurtains = function(){
-    this.leftSelector
+    debugger;
+    $(this.leftSelector)
     .css('left', '-8%')
-    .css('width', '10%')
-    .css('border-radius', '1000px/1200px');
+    .css('width', '7%')
+    .css('border-radius', '0px 0px 1000px/1200px 0px');
 
-    this.rightSelector
+    $(this.rightSelector)
     .css('right', '-8%')
-    .css('width', '10%')
-    .css('border-radius', '1000px/1200px');
+    .css('width', '7%')
+    .css('border-radius', '0px 0px 0px 1000px/1200px');
   };
 
 };
