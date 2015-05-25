@@ -1,0 +1,31 @@
+@for $i from 1 through 6 {
+  .#{curtain-left}-#{$i} {
+    width: 16.5% * $i;
+		left: -8% * $i;
+    z-index: -$i;
+  }
+  .#{curtain-right}-#{$i} {
+    width: 16.5% * $i;
+		right: -8%* $i;
+    z-index: -$i;
+  }
+}
+
+[class*='curtain-'] {
+	-webkit-transition: border-radius, width, left, right;
+  -webkit-transition-duration: 3s;
+
+  border: 1px solid;
+	position: fixed;
+  background-color: darkred;
+  height: 500px;
+  margin-top: -250px;
+}
+
+[class*='curtain-left'] {
+  border-radius: 100px / 1200px 0px;
+}
+
+[class*='curtain-right'] {
+  border-radius: 0px 100px / 1200px;
+}

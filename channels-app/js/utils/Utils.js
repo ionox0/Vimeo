@@ -27,7 +27,7 @@ module.exports = {
   setFader: function(selector, time){
     var fadeout = null;
     $(window).mousemove(function() {
-      if (this.fadeout == null){
+      if (this.fadeout === null){
         clearTimeout(fadeout);
         fadeout = setTimeout(hide, time);
         $(selector).fadeIn('slow');
