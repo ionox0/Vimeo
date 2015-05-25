@@ -17,12 +17,14 @@ localhost:3005/#staffpicks
 ### TODO
 - [ ] Tests
 - [ ] Borders
+- [ ] Mobile support
 - [ ] Cross browser
 - [ ] Router, routes
 - [x] Polyfill for Promise
-- [ ] urlencoded routes
+- [ ] Urlencoded routes
 - [ ] Vimeo endpoints
 - [ ] Leverage JSONP callback
+- [ ] Ternary operator jshint error...
 - [ ] Unimplemented Grunt tasks
 - [x] Display video info (sidebar view)
 - [ ] Animate List View (tray open/close)
